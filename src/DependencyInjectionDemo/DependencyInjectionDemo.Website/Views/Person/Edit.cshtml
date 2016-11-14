@@ -1,0 +1,30 @@
+﻿@model DependencyInjectionDemo.Website.ViewModels.PersonViewModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit @Model.DisplayName</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(m => m.Title)
+        @Html.TextBoxFor(m => m.Title)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.FirstName)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Surname)
+        @Html.TextBoxFor(m => m.Surname)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Age)
+        @Html.TextBoxFor(m => m.Age)
+    </div>
+    <div>
+        <button>Save</button>
+    </div>
+}

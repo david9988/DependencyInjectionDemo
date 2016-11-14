@@ -1,0 +1,14 @@
+﻿@model DependencyInjectionDemo.Website.ViewModels.PersonListViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>People</h1>
+
+<ul>
+    @foreach(var person in Model.People)
+    {
+        <li id="@person.PersonId">@Html.ActionLink(person.DisplayName, "Edit", "Person", new { id = person.PersonId }, null)</li>
+    }
+</ul>
